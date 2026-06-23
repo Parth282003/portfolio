@@ -1,216 +1,94 @@
-// Portfolio Update Helper Script
-// This script helps you quickly update your portfolio with your resume information
+// Portfolio Data - Parth Kohli
+// Last updated: 2025
 
 const portfolioData = {
-    // Personal Information
-    name: "Parth Kohli", // Update with your name
-    title: "Computer Science Student & Data Science Enthusiast", // Update with your job title
-    email: "parthkohli2k3@gmail.com", // Update with your email
-    university: "VIT Bhopal University", // Update with your university
-    location: "Bhopal, India", // Update with your location
-    
-    // Professional Summary
-    summary: "Passionate about data science, machine learning, and building scalable solutions. Currently pursuing B.Tech in Computer Science at VIT Bhopal University.",
-    
-    // About Section
+    name: "Parth Kohli",
+    title: "DevOps Intern & Computer Science Student",
+    email: "parthkohli2k3@gmail.com",
+    university: "VIT Bhopal University",
+    location: "Delhi / Bhopal, India",
+
+    summary: "Building and automating infrastructure at CHI Networks. Passionate about DevOps, cloud infrastructure, security tooling, and machine learning.",
+
     about: [
-        "I'm a passionate Computer Science student at VIT Bhopal University with a strong foundation in data science and machine learning. Currently pursuing my B.Tech in Computer Science and Engineering with a CGPA of 7.81, I specialize in building scalable data-driven solutions and implementing cutting-edge machine learning algorithms.",
-        "With experience in data science internships and diverse technical projects, I've developed expertise in Python, machine learning frameworks, and cloud technologies. I'm actively pursuing AWS Solutions Architect and MERN Full Stack certifications to enhance my skills further."
+        "I'm a Computer Science student at VIT Bhopal University (CGPA: 8.05) currently working as a DevOps Intern at CHI Networks, Delhi. My work spans CI/CD pipelines, Linux server automation, Docker-based deployments, security tooling, and backend API development.",
+        "I've automated full-stack deployments to under 90 seconds and server provisioning to under 6 minutes using Jenkins and Ansible. I also have a background in data science and machine learning, having completed a separate internship delivering 8 ML projects."
     ],
-    
-    // Statistics
+
     stats: {
-        cgpa: "7.81", // Current CGPA
-        projects: "8+", // Number of projects
-        studyYears: "2+" // Years of study
+        cgpa: "8.05",
+        projects: "10+",
+        internships: "2"
     },
-    
-    // Projects (Update with your actual projects)
+
+    experience: [
+        {
+            title: "DevOps Intern",
+            company: "CHI Networks",
+            duration: "Feb 2025 – Present",
+            type: "On-Site, Delhi",
+            bullets: [
+                "Built Jenkins CI/CD pipelines for Django and React applications, reducing full-stack deployment time to under 90 seconds",
+                "Automated Linux server provisioning with Ansible, cutting new server setup time to under 6 minutes",
+                "Deployed and containerized 10+ self-hosted services using Docker and Docker Compose",
+                "Developed FastAPI-based REST APIs to automate OpenVAS vulnerability scan management and integrate with Wazuh SIEM",
+                "Configured and provisioned network switches, handling VLAN setup and inter-VLAN routing",
+                "Built n8n automation workflows including an end-to-end proposal and PowerPoint generation pipeline"
+            ],
+            tags: ["Jenkins", "Ansible", "Docker", "FastAPI", "Wazuh", "OpenVAS", "Linux", "n8n", "Nginx", "Sentry"]
+        },
+        {
+            title: "Data Science Intern",
+            company: "Main Flow Services and Technologies Pvt. Ltd.",
+            duration: "Feb 2025 – Apr 2025",
+            type: "Remote",
+            bullets: [
+                "Completed Data Science with Python internship under Ministry of Corporate Affairs and MSME",
+                "Delivered 8 ML projects in 2 months using NumPy, Pandas, Matplotlib, and Scikit-learn, improving model accuracy by up to 15%"
+            ],
+            tags: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"]
+        }
+    ],
+
     projects: [
         {
             name: "Book Recommender System",
-            description: "A content-based recommendation system using Python, Scikit-learn, and K-Means Clustering. Processes 8000+ books to provide 6-10 similar book recommendations based on genre, author, and metadata.",
+            description: "A content-based recommender system using K-Means clustering on 8,000+ books, achieving 85%+ genre alignment and reducing user search time by ~40%.",
             technologies: ["Python", "Scikit-learn", "K-Means"],
             github: "https://github.com/Parth282003/recommender-system"
         },
         {
             name: "Nimbus ETL Pipeline",
-            description: "A scalable ETL pipeline using Apache Airflow, Python, and PostgreSQL. Automatically fetches daily weather data from public APIs across 5+ countries with DAG-based automation and real-time data tracking.",
+            description: "Automated daily weather ETL for 50+ locations using Apache Airflow with 99% uptime. Loads 1,000+ records/day to PostgreSQL with 30% faster query performance.",
             technologies: ["Apache Airflow", "Python", "PostgreSQL"],
             github: "https://github.com/Parth282003/ETL"
         },
         {
             name: "Tumour Detection Model",
-            description: "A CNN-based tumor detection system using Inception Model architecture with TensorFlow and Keras. Trained on 20,000+ medical images with 96% accuracy for medical diagnosis applications.",
+            description: "CNN-based tumour detection using Inception architecture trained on 20,000+ medical images with data augmentation. Achieved 96% validation and test accuracy.",
             technologies: ["TensorFlow", "Keras", "CNN"],
             github: "https://github.com/Parth282003/tumour-detection"
         }
     ],
-    
-    // Skills (Update with your actual skills)
-    skills: [
-        // Programming Languages
-        { name: "Python", icon: "fab fa-python" },
-        { name: "C++", icon: "fab fa-cpp" },
-        { name: "SQL", icon: "fas fa-database" },
-        { name: "HTML/CSS", icon: "fab fa-html5" },
-        
-        // Machine Learning & Data Science
-        { name: "TensorFlow", icon: "fas fa-brain" },
-        { name: "Keras", icon: "fas fa-brain" },
-        { name: "Scikit-learn", icon: "fas fa-chart-bar" },
-        { name: "Pandas", icon: "fas fa-chart-line" },
-        { name: "NumPy", icon: "fas fa-chart-pie" },
-        { name: "Matplotlib", icon: "fas fa-chart-area" },
-        
-        // Tools & Technologies
-        { name: "Git", icon: "fab fa-git-alt" },
-        { name: "Docker", icon: "fab fa-docker" },
-        { name: "AWS", icon: "fab fa-aws" },
-        { name: "Google Cloud", icon: "fab fa-google" },
-        { name: "PostgreSQL", icon: "fas fa-database" },
-        { name: "Apache Airflow", icon: "fas fa-cloud" },
-        { name: "Apache Kafka", icon: "fas fa-stream" }
+
+    skills: {
+        "Languages": ["Python", "C++", "SQL", "Bash", "YAML", "HTML/CSS"],
+        "DevOps & Infrastructure": ["Docker", "Docker Compose", "Jenkins", "Ansible", "SaltStack", "Nginx", "Linux (Ubuntu)", "n8n", "Networking / VLANs", "OpenStack"],
+        "Security & Monitoring": ["OpenVAS / Greenbone", "Wazuh", "Sentry", "Grafana"],
+        "Frameworks & Libraries": ["FastAPI", "Django", "React", "TensorFlow", "Keras", "Scikit-learn", "Pandas", "NumPy"],
+        "Tools & Platforms": ["Git", "REST APIs", "PostgreSQL", "Apache Kafka", "Apache Airflow", "AWS", "Google Cloud"]
+    },
+
+    certifications: [
+        { name: "AWS Certified Cloud Practitioner (CLF-C02)", issuer: "Amazon Web Services", year: 2025 },
+        { name: "OCI Certified Data Science Professional", issuer: "Oracle", year: 2025 },
+        { name: "AWS Solutions Architect – Associate", issuer: "Ethnus", year: 2024 }
     ],
-    
-    // Social Links
+
     social: {
         github: "https://github.com/Parth282003",
-        linkedin: "https://www.linkedin.com/in/parth-kohli-543978236/"
+        linkedin: "https://linkedin.com/in/psk28"
     }
 };
 
-// Function to update the portfolio
-function updatePortfolio() {
-    console.log("Updating portfolio with your information...");
-    
-    // Update page title
-    document.title = `${portfolioData.name} - Portfolio`;
-    
-    // Update hero section
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        heroTitle.innerHTML = `Hi, I'm <span class="highlight">${portfolioData.name}</span>`;
-    }
-    
-    const heroSubtitle = document.querySelector('.hero-subtitle');
-    if (heroSubtitle) {
-        heroSubtitle.textContent = portfolioData.title;
-    }
-    
-    const heroDescription = document.querySelector('.hero-description');
-    if (heroDescription) {
-        heroDescription.textContent = portfolioData.summary;
-    }
-    
-    // Update profile card
-    const profileName = document.querySelector('.profile-info h3');
-    if (profileName) {
-        profileName.textContent = portfolioData.name;
-    }
-    
-    const profileTitle = document.querySelector('.profile-info p');
-    if (profileTitle) {
-        profileTitle.textContent = portfolioData.title;
-    }
-    
-    // Update about section
-    const aboutParagraphs = document.querySelectorAll('.about-text p');
-    if (aboutParagraphs.length >= 2) {
-        aboutParagraphs[0].textContent = portfolioData.about[0];
-        aboutParagraphs[1].textContent = portfolioData.about[1];
-    }
-    
-    // Update stats
-    const stats = document.querySelectorAll('.stat h3');
-    if (stats.length >= 3) {
-        stats[0].textContent = portfolioData.stats.experience;
-        stats[1].textContent = portfolioData.stats.projects;
-        stats[2].textContent = portfolioData.stats.clients;
-    }
-    
-    // Update projects
-    const projectCards = document.querySelectorAll('.project-card');
-    portfolioData.projects.forEach((project, index) => {
-        if (projectCards[index]) {
-            const projectName = projectCards[index].querySelector('h3');
-            const projectDesc = projectCards[index].querySelector('p');
-            const projectTech = projectCards[index].querySelector('.project-tech');
-            const projectLinks = projectCards[index].querySelectorAll('.project-link');
-            
-            if (projectName) projectName.textContent = project.name;
-            if (projectDesc) projectDesc.textContent = project.description;
-            
-            if (projectTech) {
-                projectTech.innerHTML = project.technologies.map(tech => 
-                    `<span class="tech-tag">${tech}</span>`
-                ).join('');
-            }
-            
-            if (projectLinks.length >= 1) {
-                projectLinks[0].href = project.github;
-            }
-        }
-    });
-    
-    // Update skills
-    const skillsContainer = document.querySelector('.skills-content');
-    if (skillsContainer) {
-        skillsContainer.innerHTML = portfolioData.skills.map(skill => `
-            <div class="skill-item">
-                <i class="${skill.icon}"></i>
-                <span>${skill.name}</span>
-            </div>
-        `).join('');
-    }
-    
-    // Update contact information
-    const contactItems = document.querySelectorAll('.contact-item span');
-    if (contactItems.length >= 3) {
-        contactItems[0].textContent = portfolioData.email;
-        contactItems[1].textContent = portfolioData.university;
-        contactItems[2].textContent = portfolioData.location;
-    }
-    
-    // Update social links
-    const socialLinks = document.querySelectorAll('.social-link');
-    if (socialLinks.length >= 2) {
-        socialLinks[0].href = portfolioData.social.github;
-        socialLinks[1].href = portfolioData.social.linkedin;
-    }
-    
-    console.log("Portfolio updated successfully!");
-}
-
-// Instructions for using this script:
-console.log(`
-=== PORTFOLIO UPDATE INSTRUCTIONS ===
-
-1. Update the 'portfolioData' object above with your information from your resume
-2. Open index.html in your browser
-3. Open the browser console (F12)
-4. Copy and paste this entire script into the console
-5. Run: updatePortfolio()
-
-Or you can manually update the HTML file following the CUSTOMIZATION_GUIDE.md
-
-=== INFORMATION TO UPDATE ===
-- Personal details (name, email, phone, location)
-- Professional summary
-- About section text
-- Statistics (experience, projects, clients)
-- Projects (names, descriptions, technologies, links)
-- Skills (programming languages, frameworks, tools)
-- Social media links
-
-=== NEXT STEPS ===
-1. Extract information from your resume (parths_Resume.pdf)
-2. Update the portfolioData object
-3. Test the changes
-4. Deploy your portfolio
-`);
-
-// Export for use in browser console
 window.portfolioData = portfolioData;
-window.updatePortfolio = updatePortfolio;
-
