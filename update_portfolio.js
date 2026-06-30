@@ -25,7 +25,7 @@ const portfolioData = {
         {
             title: "DevOps Intern",
             company: "CHI Networks",
-            duration: "Feb 2025 – Present",
+            duration: "Feb 2026 – Present",
             type: "On-Site, Delhi",
             bullets: [
                 "Built Jenkins CI/CD pipelines for Django and React applications, reducing full-stack deployment time to under 90 seconds",
